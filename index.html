@@ -1,44 +1,56 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geovanna Maia Freitas – Portfólio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <!-- Tailwind gerado -->
+    <!-- Tailwind CSS gerado -->
     <link rel="stylesheet" href="assets/index-BFHoZfbG.css" />
+    <!-- Bundle JS do React/Vite/etc. -->
     <script type="module" src="assets/index-TzugY8mr.js"></script>
   </head>
 
   <body class="bg-floral-gradient">
-    <!-- Container posicionado relativamente para servir de referência -->
+    <!-- 1) container relativo: serve de referência para posicionamento absoluto da foto -->
     <div class="relative">
 
-      <!-- Foto posicionada absoluta sobre o header -->
+      <!--
+        2) FOTO: posição absoluta sobre o header.
+        - top-? altera o deslocamento vertical (quanto maior, mais a foto desce)
+        - left-? altera o deslocamento horizontal (quanto maior, mais a foto vai pra direita)
+      -->
       <img
         src="assets/geovanna-photo-PM0WacmB.png"
         alt="Foto de Geovanna Maia Freitas"
         class="
-          absolute 
-          top-8    <!-- Ajuste aqui o deslocamento vertical (top-?) -->
-          left-8   <!-- Ajuste aqui o deslocamento horizontal (left-?) -->
-          w-48 h-48 
-          rounded-full 
-          shadow-lg 
+          absolute
+          top-12    <!-- Ajuste aqui: troque 12 por 10, 14, 16… até ficar na altura desejada -->
+          left-12   <!-- Ajuste aqui: troque 12 por 10, 14, 16… até ficar na posição horizontal desejada -->
+          w-48 h-48
+          rounded-full
+          shadow-lg
           z-20
         "
       />
 
-      <!-- Ponto de montagem do React, com padding para não ficar debaixo da foto -->
+      <!--
+        3) ROOT do React: empurra o restante do conteúdo para não ficar atrás da foto
+        - pt-? altera o padding-top (quanto maior, mais abaixo o React renderiza seu app)
+        - pl-? altera o padding-left (quanto maior, mais à direita o conteúdo é empurrado)
+      -->
       <div
         id="root"
         class="
-          pt-24   <!-- Ajuste aqui o padding-top (pt-?) para empurrar o conteúdo para baixo -->
-          pl-64   <!-- Ajuste aqui o padding-left (pl-?) para empurrar o conteúdo para a direita -->
+          pt-32    <!-- Ajuste aqui: troque 32 por 24, 28, 36… conforme o espaço necessário em cima -->
+          pl-64    <!-- Ajuste aqui: troque 64 por 56, 72… conforme o espaço necessário à esquerda -->
         "
       ></div>
+
     </div>
   </body>
 </html>
+
 
