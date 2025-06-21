@@ -11,15 +11,18 @@
     <link rel="stylesheet" crossorigin href="assets/index-BFHoZfbG.css" />
   </head>
 
-  <body>
-    <!-- Exibe a foto antes do conteúdo injetado pelo React -->
+<body>
+  <!-- 1. Cria um wrapper para header -->
+  <div class="header-wrapper">
+    <!-- 2. Imagem com classe para estilos -->
     <img
       src="assets/geovanna-photo-PM0WacmB.png"
       alt="Foto de Geovanna Maia Freitas"
-      style="display:block; margin:20px auto; max-width:200px; border-radius:50%;"
+      class="profile-photo"
     />
 
-    <!-- Ponto de montagem do React/JS -->
+    <!-- 3. Conteúdo renderizado pelo React/Vite/etc -->
     <div id="root"></div>
-  </body>
+  </div>
+</body>
 </html>
