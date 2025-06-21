@@ -5,24 +5,40 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geovanna Maia Freitas – Portfólio</title>
-    <!-- Importa o JavaScript principal de forma relativa -->
-    <script type="module" crossorigin src="assets/index-TzugY8mr.js"></script>
-    <!-- Importa o CSS principal de forma relativa -->
-    <link rel="stylesheet" crossorigin href="assets/index-BFHoZfbG.css" />
+
+    <!-- Tailwind gerado -->
+    <link rel="stylesheet" href="assets/index-BFHoZfbG.css" />
+    <script type="module" src="assets/index-TzugY8mr.js"></script>
   </head>
 
-<body>
-  <!-- 1. Cria um wrapper para header -->
-  <div class="header-wrapper">
-    <!-- 2. Imagem com classe para estilos -->
-    <img
-      src="assets/geovanna-photo-PM0WacmB.png"
-      alt="Foto de Geovanna Maia Freitas"
-      class="profile-photo"
-    />
+  <body class="bg-floral-gradient">
+    <!-- Container posicionado relativamente para servir de referência -->
+    <div class="relative">
 
-    <!-- 3. Conteúdo renderizado pelo React/Vite/etc -->
-    <div id="root"></div>
-  </div>
-</body>
+      <!-- Foto posicionada absoluta sobre o header -->
+      <img
+        src="assets/geovanna-photo-PM0WacmB.png"
+        alt="Foto de Geovanna Maia Freitas"
+        class="
+          absolute 
+          top-8    <!-- Ajuste aqui o deslocamento vertical (top-?) -->
+          left-8   <!-- Ajuste aqui o deslocamento horizontal (left-?) -->
+          w-48 h-48 
+          rounded-full 
+          shadow-lg 
+          z-20
+        "
+      />
+
+      <!-- Ponto de montagem do React, com padding para não ficar debaixo da foto -->
+      <div
+        id="root"
+        class="
+          pt-24   <!-- Ajuste aqui o padding-top (pt-?) para empurrar o conteúdo para baixo -->
+          pl-64   <!-- Ajuste aqui o padding-left (pl-?) para empurrar o conteúdo para a direita -->
+        "
+      ></div>
+    </div>
+  </body>
 </html>
+
